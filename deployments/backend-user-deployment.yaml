@@ -15,7 +15,7 @@ spec:
         service: udagram-api-user
     spec:
       containers:
-      - image: tungtt31/udagram-api-user:v2
+      - image: tungtt31/udagram-api-user:v3
         name: udagram-api-user
         imagePullPolicy: Always
         resources:

@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udagram-api-frontend
-  name: udagram-api-frontend
+    service: udagram-frontend
+  name: udagram-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: udagram-api-frontend
+      service: udagram-frontend
   template:
     metadata:
       labels:
-        service: udagram-api-frontend
+        service: udagram-frontend
         api: external
     spec:
       containers:
-      - image: tungtt31/udagram-api-frontend:v2
-        name: udagram-api-frontend
+      - image: tungtt31/udagram-frontend:v3
+        name: udagram-frontend
         imagePullPolicy: Always
         ports:
         - containerPort: 80
